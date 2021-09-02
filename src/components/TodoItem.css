@@ -70,7 +70,7 @@
 .toDo-item__amount.grey {
   font-size: 2rem;
   font-weight: bold;
-  color: #3a3a3a;
+  color: rgb(168, 167, 167);
   background-color: #dbdbdb;
   border: 1px solid rgb(44, 44, 44);
   padding: 0.5rem;
@@ -101,7 +101,7 @@
   min-height: 4rem;
   border: 1px solid #4e4e4e;
   background-color: #dbdbdb;
-  color: #3a3a3a;
+  color: rgb(168, 167, 167);
   border-radius: 12px;
   align-items: center;
   font-weight: bold;
@@ -109,6 +109,7 @@
   font-size: 1.5rem;
   font-weight: 400;
   text-decoration: line-through;
+  font-weight: bold;
 }
 .btn {
   margin: 5px;
@@ -119,6 +120,16 @@
     align-items: center;
     justify-content: flex-start;
     flex: 2;
+    min-width: 12rem;
+    max-width: 26rem;
+  }
+  .toDo-item__description.grey {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 2;
+    min-width: 12rem;
+    max-width: 26rem;
   }
 
   .expense-item__description h2 {
@@ -126,13 +137,21 @@
   }
 }
 @media (max-width: 580px) {
+  .toDo-item {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .toDo-item__description {
-    font-size: 10px;
-    max-width: 8rem;
+    font-size: 0.8rem;
+    min-width: 6rem;
+    max-width: 16rem;
   }
   .toDo-item__description.grey {
     font-size: 10px;
-    max-width: 8rem;
+    min-width: 6rem;
+    max-width: 16rem;
   }
   .expense-item__description h2 {
     font-size: 1rem;
@@ -150,6 +169,16 @@
   .toDo-item__amount.grey {
     min-width: 1rem;
     min-height: 1rem;
+    font-size: 1rem;
+  }
+  .toDo-item-number {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    font-size: 1rem;
+  }
+  .toDo-item-number.grey {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
     font-size: 1rem;
   }
 }

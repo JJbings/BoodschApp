@@ -21,6 +21,7 @@
   text-decoration: line-through;
   align-items: center;
   justify-content: center;
+  color: rgb(168, 167, 167);
 }
 
 .toDo-date__month {
@@ -35,4 +36,19 @@
 .toDo-date__day {
   font-size: 1rem;
   font-weight: bold;
+}
+@media (max-width: 580px) {
+  .toDo-date {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  .toDo-date__day {
+    font-size: 10px;
+  }
+  .toDo-date.grey {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
 }
