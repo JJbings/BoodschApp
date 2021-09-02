@@ -46,10 +46,26 @@ function App() {
       const updatedItems = prevItems.filter((item) => item.id !== id);
       const updatedItem = prevItems.filter((item) => item.id === id);
       updatedItem[0].grey = true;
-      console.log(updatedItem);
+
       const updatedGreys = [...updatedItems, ...updatedItem];
-      console.log(updatedGreys);
+
       return updatedGreys;
+    });
+  };
+  const onDoneHandlerRemedy = (id) => {
+    setToDoItems((prevItems) => {
+      const updatedItem = prevItems.filter((item) => item.id === id);
+      const updatedItems = prevItems.filter((item) => item.id !== id);
+      updatedItem[0].grey = false;
+
+      return [...updatedItem, ...updatedItems];
+    });
+  };
+  const onUpdateHandler = (id) => {
+    setToDoItems((prevItems) => {
+      const updatedItem = prevItems.filter((item) => item.id === id);
+      const updatedItems = prevItems.filter((item) => item.id !== id);
+      return [...updatedItem, ...updatedItems];
     });
   };
 
@@ -59,6 +75,8 @@ function App() {
       <ToDos
         onDeleteItem={deleteTodoItemHandler}
         onGrey={onDoneHandler}
+        onUndoGrey={onDoneHandlerRemedy}
+        onUpdate={onUpdateHandler}
         items={toDoItems}></ToDos>
     </div>
   );

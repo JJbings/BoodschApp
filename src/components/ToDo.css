@@ -1,6 +1,6 @@
 .toDo {
   padding: 1rem;
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(247, 247, 247);
   margin: 2rem auto;
   width: 50rem;
   max-width: 95%;
@@ -12,8 +12,8 @@
 
   padding: 0.5rem;
   margin: 1rem 0;
-
-  background-color: #4b4b4b;
+  padding-left: 3rem;
+  background-color: #ececec;
   border-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
@@ -21,14 +21,14 @@
 .des-a {
   font-size: 1rem;
 
-  color: white;
+  color: rgb(8, 8, 8);
   font-weight: bolder;
 }
 .des-b {
   margin-left: 3rem;
   font-size: 1rem;
   font-weight: bolder;
-  color: white;
+  color: rgb(8, 8, 8);
 }
 .des-c {
   color: #3a3a3a;
@@ -37,12 +37,12 @@
   flex: 1;
   font-weight: bolder;
   margin-left: 2rem;
-  color: white;
+  color: rgb(8, 8, 8);
 }
 .des-d {
   font-size: 1rem;
   font-weight: bold;
-  color: white;
+  color: rgb(8, 8, 8);
 
   padding: 0.5rem;
 }

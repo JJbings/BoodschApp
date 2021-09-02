@@ -15,6 +15,8 @@ const ToDos = (props) => {
       <TodoList
         onDeleteItem={props.onDeleteItem}
         onDoneHandler={props.onGrey}
+        onUndoGrey={props.onUndoGrey}
+        onUpdate={props.onUpdate}
         items={props.items}
         greys={props.greys}></TodoList>
     </Card>

@@ -5,8 +5,8 @@
 
   padding: 0.5rem;
   margin: 1rem 0;
-
-  background-color: #4b4b4b;
+  width: auto;
+  background-color: #eeeeee;
 }
 .toDo-item.grey {
   display: flex;
@@ -16,7 +16,7 @@
   padding: 0.5rem;
   margin: 1rem 0;
 
-  background-color: #1a1a1a;
+  background-color: #e6e6e6;
 }
 .toDo-item__description {
   display: flex;
@@ -27,10 +27,12 @@
   justify-content: flex-start;
   flex: 1;
   color: #3a3a3a;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   flex: 1;
+  font-weight: bold;
   margin: 0 1rem;
-  color: white;
+  color: rgb(94, 94, 94);
+  width: auto;
 }
 .toDo-item__description.grey {
   display: flex;
@@ -41,10 +43,11 @@
   justify-content: flex-start;
   flex: 1;
   color: #3a3a3a;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   flex: 1;
+  font-weight: bold;
   margin: 0 1rem;
-  color: rgb(41, 40, 40);
+  color: rgb(190, 190, 190);
   text-decoration: line-through;
 }
 
@@ -56,12 +59,19 @@
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding-left: 0.5rem;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .toDo-item__amount.grey {
   font-size: 2rem;
   font-weight: bold;
   color: #3a3a3a;
-  background-color: #40005d;
+  background-color: #dbdbdb;
   border: 1px solid rgb(44, 44, 44);
   padding: 0.5rem;
   border-radius: 12px;
@@ -71,47 +81,75 @@
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
-  width: 5.5rem;
-  height: 5.5rem;
+  min-width: 4rem;
+  min-height: 4rem;
   border: 1px solid #ececec;
   background-color: #2a2a2a;
   color: white;
   border-radius: 12px;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  font-weight: bold;
 }
 .toDo-item-number.grey {
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
-  width: 5.5rem;
-  height: 5.5rem;
+  min-width: 4rem;
+  min-height: 4rem;
   border: 1px solid #4e4e4e;
-  background-color: #1a1919;
+  background-color: #dbdbdb;
   color: #3a3a3a;
   border-radius: 12px;
   align-items: center;
+  font-weight: bold;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-decoration: line-through;
+}
+.btn {
+  margin: 5px;
 }
 @media (min-width: 580px) {
   .toDo-item__description {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    flex: 1;
+    flex: 2;
   }
 
   .expense-item__description h2 {
     font-size: 1.25rem;
   }
-
-  .expense-item__price {
-    font-size: 1.25rem;
-    padding: 0.5rem 1.5rem;
+}
+@media (max-width: 580px) {
+  .toDo-item__description {
+    font-size: 10px;
+    max-width: 8rem;
+  }
+  .toDo-item__description.grey {
+    font-size: 10px;
+    max-width: 8rem;
+  }
+  .expense-item__description h2 {
+    font-size: 1rem;
+    max-width: 8rem;
+  }
+  .expense-item__description.grey h2 {
+    font-size: 1rem;
+    max-width: 8rem;
+  }
+  .toDo-item__amount {
+    min-width: 1rem;
+    min-height: 1rem;
+    font-size: 1rem;
+  }
+  .toDo-item__amount.grey {
+    min-width: 1rem;
+    min-height: 1rem;
+    font-size: 1rem;
   }
 }

@@ -10,6 +10,8 @@ const TodoList = (props) => {
     <TodoItem
       onDeleteItem={props.onDeleteItem}
       onGreyItem={props.onDoneHandler}
+      onUndoGrey={props.onUndoGrey}
+      onUpdate={props.onUpdate}
       key={item.id}
       name={item.name}
       grey={item.grey}

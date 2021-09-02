@@ -21,6 +21,7 @@ const TodoForm = (props) => {
       name: enteredName,
       amount: enteredAmount,
       date: new Date(enteredDate),
+      grey: false,
     };
 
     props.onFormData(todoData);

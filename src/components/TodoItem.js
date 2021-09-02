@@ -8,11 +8,22 @@ const TodoItem = (props) => {
   };
 
   const onDoneHandler = () => {
-    props.onGreyItem(props.id);
+    if (!props.grey) {
+      props.onGreyItem(props.id);
+    }
+    if (props.grey) {
+      props.onUndoGrey(props.id);
+    }
+  };
+  const onUpdateHandler = () => {
+    props.onUpdate(props.id);
   };
   return (
     <li>
       <Card className={!props.grey ? "toDo-item" : "toDo-item grey"}>
+        <button className="btn" onClick={onUpdateHandler}>
+          ⬆︎
+        </button>
         <div
           className={
             !props.grey ? "toDo-item-number" : "toDo-item-number grey"
@@ -36,8 +47,12 @@ const TodoItem = (props) => {
           {" "}
           {props.amount}
         </div>
-        <button onClick={onDeleteItemHandler}>X </button>
-        <button onClick={onDoneHandler}>✓</button>
+        <button className="btn" onClick={onDeleteItemHandler}>
+          X{" "}
+        </button>
+        <button className="btn" onClick={onDoneHandler}>
+          ✓
+        </button>
       </Card>
     </li>
   );
