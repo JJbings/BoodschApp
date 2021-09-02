@@ -5,3 +5,44 @@
   width: 50rem;
   max-width: 95%;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem;
+  margin: 1rem 0;
+
+  background-color: #4b4b4b;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.des-a {
+  font-size: 1rem;
+
+  color: white;
+  font-weight: bolder;
+}
+.des-b {
+  margin-left: 3rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: white;
+}
+.des-c {
+  color: #3a3a3a;
+
+  font-size: 1rem;
+  flex: 1;
+  font-weight: bolder;
+  margin-left: 2rem;
+  color: white;
+}
+.des-d {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+
+  padding: 0.5rem;
+}

@@ -10,6 +10,18 @@
   align-items: center;
   justify-content: center;
 }
+.toDo-date.grey {
+  display: flex;
+  flex-direction: column;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 1px solid #ececec;
+  background-color: #2a2a2a;
+  color: rgb(53, 52, 52);
+  text-decoration: line-through;
+  align-items: center;
+  justify-content: center;
+}
 
 .toDo-date__month {
   font-size: 0.75rem;

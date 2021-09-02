@@ -7,7 +7,7 @@ const ToDoItemDate = (props) => {
   const year = props.date.getFullYear();
 
   return (
-    <Card className="toDo-date">
+    <Card className={!props.grey ? "toDo-date" : "toDo-date grey"}>
       <div className="toDo-date__day">{day}</div>
       <div className="toDo-date__month">{month}</div>
       <div className="toDo-date__year">{year}</div>
