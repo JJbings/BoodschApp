@@ -53,7 +53,11 @@ const TodoForm = (props) => {
           <label>Datum</label>
           <input
             type="date"
-            value={enteredDate}
+            value={
+              enteredDate != null
+                ? enteredDate
+                : new Date().toJSON().slice(0, 10).replace(/-/g, "/")
+            }
             onChange={dateChangeHandler}></input>
         </div>
       </div>
